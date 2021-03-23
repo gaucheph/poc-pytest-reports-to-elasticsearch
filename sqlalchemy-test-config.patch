@@ -1,0 +1,25 @@
+diff --git a/setup.cfg b/setup.cfg
+index fd196f4f5..3853d5e7a 100644
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -84,6 +84,8 @@ where = lib
+ [tool:pytest]
+ addopts = --tb native -v -r sfxX --maxfail=25 -p no:warnings -p no:logging
+ python_files = test/*test_*.py
++es_address = localhost:9200
++es_index_name = test_data
+ 
+ [upload]
+ sign = 1
+diff --git a/tox.ini b/tox.ini
+index 966048877..c815c7280 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -19,6 +19,7 @@ deps=
+      pytest>=4.6.11,<5.0; python_version < '3'
+      pytest>=6.2; python_version >= '3'
+      pytest-xdist
++     pytest-elk-reporter
+      greenlet != 0.4.17
+      mock; python_version < '3.3'
+      importlib_metadata; python_version < '3.8'
