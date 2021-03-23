@@ -8,6 +8,10 @@ and visualize test data.
 warning: none of this should be used in production without performing your own
 due dilligence.
 
+![An example of the Discover page in Kibana after some test results are posted.](example-discover-outcomes.png)
+
+![An example of a visualization of pytest test reports based on their outcomes.](example-visualize-passed-skipped.png)
+
 ## approach
 
 we're going to run [sqlalchemy's](https://github.com/sqlalchemy/sqlalchemy) unit tests to generate test data (the largest,
